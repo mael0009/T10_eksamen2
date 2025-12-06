@@ -19,9 +19,15 @@
   src: url(fonts/Open_Sans/static/OpenSans-SemiBold.ttf);
 }
 
-/* HEADER MOBIL */
+/* GENERAL CSS */
+.mobil-header {
+  font-family: "openRegular";
+}
 
-/* Header layout */
+/**** MOBILE VERSION ****/
+
+/* HEADER*/
+/*layout */
 .mobil-header {
   display: flex;
   justify-content: space-between;
@@ -91,4 +97,43 @@
 /* når den er aktiv */
 .mobil-nav.show {
   display: flex;
+}
+
+/****** DESKTOP ******/
+
+/* HEADER */
+@media (min-width: 768px) {
+  .burger {
+    display: none; /* skjul burger */
+  }
+
+  .mobil-header {
+    padding: 20px 40px;
+  }
+
+  .mobil-nav {
+    display: flex; /* viser menuen */
+    position: static; /* fjerner dropdown */
+    flex-direction: row; /* horisontal menu */
+    background: none;
+    box-shadow: none;
+    width: auto;
+    gap: 2rem;
+    padding: 0;
+  }
+
+  .mobil-nav ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .mobil-nav li {
+    margin: 0;
+  }
+
+  .mobil-nav a {
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+  }
 }
