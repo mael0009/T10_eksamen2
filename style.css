@@ -1,0 +1,94 @@
+/* FONTS */
+@font-face {
+  font-family: "montsRegular";
+  src: url(fonts/Montserrat/static/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: "montsSemiBold";
+  src: url(fonts/Montserrat/static/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "openRegular";
+  src: url(fonts/Open_Sans/static/OpenSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: "openSemiBold";
+  src: url(fonts/Open_Sans/static/OpenSans-SemiBold.ttf);
+}
+
+/* HEADER MOBIL */
+
+/* Header layout */
+.mobil-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  background: #f2f2f2;
+}
+
+/* Logo */
+.mobil-header .logo {
+  height: 35px;
+}
+
+/* Burger menu button */
+.burger {
+  width: 28px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.burger span {
+  height: 3px;
+  width: 100%;
+  background: #222;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Navigation (gemt by default) */
+.mobil-nav {
+  display: none;
+  background: #fff;
+  padding: 20px;
+  border-top: 1px solid #eee;
+  flex-direction: column;
+  gap: 1rem;
+  position: absolute;
+  top: 60px; /* lige under headeren */
+  right: 0;
+  width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mobil-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobil-nav li {
+  margin-bottom: 14px;
+}
+
+.mobil-nav a {
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+}
+
+/* når den er aktiv */
+.mobil-nav.show {
+  display: flex;
+}
