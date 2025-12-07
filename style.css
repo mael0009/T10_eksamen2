@@ -24,6 +24,34 @@
   font-family: "openRegular";
 }
 
+.footer {
+  font-family: "openRegular";
+}
+
+/* HOVER FOOTER OG HEADER */
+.hover-line {
+  text-decoration: none;
+  color: #000;
+  position: relative; /* Gør det muligt at placere pseudo-element under teksten */
+  display: inline-block; /* Sørger for at pseudo-elementet følger linkets bredde */
+}
+
+/* Stregen laves med ::after */
+.hover-line::after {
+  content: ""; /* skal være der for at pseudo-element kan eksistere */
+  position: absolute;
+  left: 0; /* Starter helt til venstre */
+  bottom: -3px; /* Lige under teksten */
+  width: 0%; /* Start-bredde = 0 (så den kan “slide ind”) */
+  height: 2px; /* Tykkelsen på stregen */
+  background: #e31f28;
+  transition: width 0.3s ease; /* Animation der udvider bredden */
+}
+
+/* Når man holder musen over linket */
+.hover-line:hover::after {
+  width: 100%; /* Stregen udvider sig og bliver fuld længde */
+}
 /**** MOBILE VERSION ****/
 
 /* HEADER*/
@@ -99,10 +127,61 @@
   display: flex;
 }
 
-/****** DESKTOP ******/
+/* FOOTER */
 
-/* HEADER */
+.footer {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+}
+
+/* Venstre boks */
+.footer-left {
+  flex: 1;
+  background: #f2f2f2;
+  padding: 20px;
+  border-radius: 20px;
+  gap: 70px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ikoner */
+.social-icons img {
+  width: 30px;
+  margin-right: 10px;
+  transition: transform 0.2s ease; /* Gør det muligt at animere forstørrelsen */
+}
+
+/* Hover-effekt:*/
+.social-icons img:hover {
+  transform: scale(1.15); /* Forstør ikon let */
+}
+
+/* Højre boks */
+.footer-right {
+  flex: 1;
+  background: #e31f28;
+  padding: 20px 24px;
+  border-radius: 20px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* DK logo position */
+.dk-footer-logo {
+  width: 48px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+/****** DESKTOP ******/
 @media (min-width: 768px) {
+  /* HEADER */
   .burger {
     display: none; /* skjul burger */
   }
@@ -135,5 +214,23 @@
     font-size: 16px;
     color: black;
     text-decoration: none;
+  }
+
+  /* FOOTER */
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer-left,
+  .footer-right {
+    flex: 1;
+  }
+  .footer-left {
+    gap: 40px;
+  }
+
+  .footer-right {
+    justify-content: center;
   }
 }
