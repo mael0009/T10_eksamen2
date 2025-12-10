@@ -1,13 +1,4 @@
 /* FONTS */
-@font-face {
-  font-family: "montsRegular";
-  src: url(fonts/Montserrat/static/Montserrat-Regular.ttf);
-}
-
-@font-face {
-  font-family: "montsSemiBold";
-  src: url(fonts/Montserrat/static/Montserrat-SemiBold.ttf);
-}
 
 @font-face {
   font-family: "openRegular";
@@ -19,13 +10,65 @@
   src: url(fonts/Open_Sans/static/OpenSans-SemiBold.ttf);
 }
 
+@font-face {
+  font-family: "raleRegular";
+  src: url(fonts/Raleway/static/Raleway-Regular.ttf);
+}
+
+@font-face {
+  font-family: "raleSemiBold";
+  src: url(fonts/Raleway/static/Raleway-SemiBold.ttf);
+}
+
 /* GENERAL CSS */
+
+body {
+}
 .mobil-header {
   font-family: "openRegular";
 }
 
 .footer {
   font-family: "openRegular";
+}
+
+.green {
+  color: #369331;
+}
+
+h1 {
+  font-family: "raleSemiBold";
+  text-align: left;
+}
+
+h2 {
+  font-family: "raleRegular";
+  text-align: center;
+}
+
+p {
+  font-family: "openRegular";
+}
+
+.left {
+  text-align: left;
+}
+
+.btn-1 {
+  font-family: "openRegular";
+  border-radius: 30px;
+  background-color: #e31f28;
+  color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border: none;
+}
+
+.btn1-container {
+  display: flex;
+  justify-content: center;
 }
 
 /* HOVER FOOTER OG HEADER */
@@ -52,7 +95,18 @@
 .hover-line:hover::after {
   width: 100%; /* Stregen udvider sig og bliver fuld længde */
 }
-/**** MOBILE VERSION ****/
+
+/* HOVER RØDE BUTTONS */
+
+.red {
+  transition: transform 0.2s ease; /* Gør det muligt at animere forstørrelsen */
+}
+
+.red:hover {
+  transform: scale(1.1); /* forstørre ikon */
+}
+
+/**** MOBILE FIRST VERSION ****/
 
 /* HEADER*/
 /*layout */
@@ -99,11 +153,12 @@
   flex-direction: column;
   gap: 1rem;
   position: absolute;
-  top: 60px; /* lige under headeren */
+  top: 60px;
   right: 0;
   width: 200px;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  z-index: 1000; /* så dropdown-menu ligger over header */
 }
 
 .mobil-nav ul {
@@ -155,7 +210,7 @@
 
 /* Hover-effekt:*/
 .social-icons img:hover {
-  transform: scale(1.15); /* Forstør ikon let */
+  transform: scale(1.15); /* forstørre ikon */
 }
 
 /* Højre boks */
@@ -177,6 +232,70 @@
   position: absolute;
   right: 20px;
   bottom: 20px;
+}
+
+/* INDEX SÅDAN FUNGERE DET */
+
+.steps-section {
+  padding-bottom: 60px;
+}
+
+.step1 {
+  padding-top: 16px;
+  text-align: center;
+}
+
+.step2 {
+  padding-top: 16px;
+  text-align: center;
+}
+
+.step3 {
+  padding-top: 16px;
+  text-align: center;
+  padding-bottom: 16px;
+}
+
+.grid-1-1-1 {
+  padding-bottom: 30px;
+}
+
+/*  INDEX HVOR KAN DU BRUGE DINE GRØNNE POINT */
+
+.grid-1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding-top: 16px;
+  padding-bottom: 30px;
+}
+
+.galleri-mobil {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.border-mobil {
+  display: block;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  text-align: left;
+  padding: 16px;
+}
+
+.desktop-only {
+  display: none;
+}
+
+.desktop-textbox {
+  display: none;
+}
+
+.partner-sektion {
+  display: grid;
+  gap: 16px;
 }
 
 /****** DESKTOP ******/
@@ -232,5 +351,79 @@
 
   .footer-right {
     justify-content: center;
+  }
+
+  /* INDEX SÅDAN FUNGERE DET*/
+  h2 {
+    text-align: left;
+  }
+
+  .grid-1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  /* INDEX HVOR KAN DU BRUGE DINE GRØNNE POINT*/
+
+  .galleri-mobil {
+    display: none;
+  }
+
+  .desktop-only {
+    display: block;
+  }
+
+  .galleri-desktop {
+    display: contents; /* alle billeder deltager i grid'et */
+  }
+
+  /* grid'et der skaber layoutet */
+  .grid-1-1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr; /* tekst, img1, img2 */
+    grid-template-rows: auto auto; /* række 1 og 2 */
+    gap: 16px;
+    max-width: 850px;
+    margin: 0 auto;
+  }
+
+  /* teksten med CTA */
+  .border-mobil {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    background: #f2f2f2;
+    padding: 24px;
+    border-radius: 10px;
+  }
+
+  /* Billede 1 – øverste række */
+  .img2 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  /* Billede 2 – øverste række */
+  .img3 {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+  }
+
+  /* Billede 3 – nederste række (fylder to kolonner) */
+  .img4 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  /* Billede 4 – nederste række (fylder to kolonner) */
+  .img5 {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+  }
+
+  /* BILLEDER – ens styling */
+  .galleri-desktop img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
   }
 }
