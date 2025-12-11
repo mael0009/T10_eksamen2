@@ -22,8 +22,6 @@
 
 /* GENERAL CSS */
 
-body {
-}
 .mobil-header {
   font-family: "openRegular";
 }
@@ -298,6 +296,52 @@ p {
   gap: 16px;
 }
 
+/* LOG-IND */
+
+/* Glemt kodeord */
+.glemt {
+  text-decoration: underline;
+  color: black;
+}
+
+/* Opret en profil */
+.opret {
+  margin-top: 16px;
+}
+
+.opret a {
+  text-decoration: underline;
+  color: #000;
+}
+
+/* felterne */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 20px;
+  font-family: "openRegular";
+}
+
+.login-form input {
+  padding: 16px;
+  border-radius: 30px;
+  border: none;
+  background: #f2f2f2;
+  font-size: 16px;
+}
+
+/* log ind knap */
+.login-btn {
+  background: #e31f28;
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-size: 16px;
+  align-self: center; /* centrerer knappen */
+}
+
 /****** DESKTOP ******/
 @media (min-width: 768px) {
   /* HEADER */
@@ -425,5 +469,12 @@ p {
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
+  }
+
+  /* LOG-IND SIDE */
+  .login-form {
+    max-width: 800px;
+    gap: 32px;
+    margin: auto;
   }
 }
