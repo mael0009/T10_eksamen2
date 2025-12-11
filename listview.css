@@ -1,0 +1,118 @@
+/* GENERAL CSS */
+main {
+    padding: 1rem;
+}
+h1, h2 {
+    font-family: montsSemiBold;
+}
+h3 {
+    font-family: montsRegular;
+}
+p {
+    font-family: openRegular;
+}
+
+/* HERO SECTION */
+.hero_section {
+    display: grid;
+    position: relative;
+    width: 100%;
+}
+.hero_section img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+.hero_section h1 {
+    position: absolute;
+    padding-top: 4rem;
+    padding-left: 4rem;
+    color: white;
+}
+.hero_section a {
+    position: absolute; 
+    bottom: 25px;   /* adjust spacing */
+    right: 70px;    /* adjust spacing */
+    z-index: 10;    /* makes sure it's above the image */
+}
+
+/* CARDS */
+.partners {
+    display: grid;
+    padding: 1rem;
+    gap: 2rem;
+}
+.partner_card {
+    padding: 1rem;
+    background-color: #E8E8E8;
+    text-align: center;
+    box-shadow: 0px 4px 4px #80808054;
+    border-radius: 25px;
+    max-width: 220px;
+    place-self: center;
+}
+
+/* KNAPPER */
+.red_btn {
+    display: inline-block;
+    background-color: #E21E27;
+    color: white;
+    padding: 7px 25px;
+    border-radius: 50px;
+    transition: 0.2s;
+}
+.red_btn:hover {
+    background-color: #C41B23;
+}
+.green_btn {
+    display: inline-block;
+    background-color: #F5F5F5;
+    color: #277D22;
+    padding: 7px 25px;
+    border-radius: 50px;
+    border: 0.5px solid #277D22;
+    transition: 0.2s;
+}
+.btn_wrapper {
+    display: flex;
+    justify-content: center;
+    padding:2rem;
+}
+.green_btn:hover {
+    background-color: #EAEAEA;
+}
+a {
+    text-decoration: none;
+    font-family: openRegular;
+}
+
+/* TRIN */
+.trin {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 2rem;
+    border: 0.5px solid grey;
+    border-radius: 25px;
+}
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* DESKTOP VIEW */
+@media (min-width: 768px) {
+    main {
+        margin: 2rem 10rem;
+    }
+    .partners {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 2rem 4rem;
+    }
+    .partner_card {
+        max-width: 250px;
+    }
+}
