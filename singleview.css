@@ -35,7 +35,7 @@ p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 1rem;
-    gap: 2rem;
+    gap: 1rem;
     object-fit: contain;
 }
 .fordel_card {
@@ -44,7 +44,10 @@ p {
     text-align: center;
     box-shadow: 0px 4px 4px #80808054;
     border-radius: 25px;
-    max-width: 220px;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
 }
 
 /* LOG IND SECTION */
@@ -53,6 +56,11 @@ p {
 }
 .green_text {
     color: #369331;
+}
+.log_ind p {
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
 /* KNAPPER */
@@ -71,7 +79,7 @@ p {
     background-color: #C41B23;
 }
 .green_btn {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
