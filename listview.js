@@ -19,7 +19,7 @@ function showPartners(data) {
         `<article class="partner_card">
              <img src="https://pghwxgkhepdabfkrvtkq.supabase.co/storage/v1/object/public/images/imgs/${item.logo}" alt="logo">
              <p>${item.description}</p>
-             <a class="red_btn" href="produkt.html?id=${item.id}">SE GRØNNE FORDELE</a>
+             <a class="red_btn" href="singleview.html?id=${item.id}">SE GRØNNE FORDELE</a>
          </article>
          `;
     });
