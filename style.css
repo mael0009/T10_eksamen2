@@ -20,6 +20,11 @@
   src: url(fonts/Raleway/static/Raleway-SemiBold.ttf);
 }
 
+@font-face {
+  font-family: "raleBold";
+  src: url(fonts/Raleway/static/Raleway-Bold.ttf);
+}
+
 /* GENERAL CSS */
 
 .mobil-header {
@@ -39,9 +44,14 @@ h1 {
   text-align: left;
 }
 
-h2 {
+.center {
   font-family: "raleRegular";
   text-align: center;
+}
+
+h2 {
+  font-family: "raleSemiBold";
+  text-align: left;
 }
 
 p {
@@ -304,6 +314,50 @@ p {
   gap: 16px;
 }
 
+/* INDEX KONCEPT SEKTION */
+
+.koncept {
+  padding-bottom: 24px;
+}
+
+.koncept-wrapper {
+  display: flex;
+  flex-direction: column;
+  background: #f2f2f2;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+/* Billedet */
+.koncept-img {
+  position: relative; /* for at kunne placere tekst ovenpå billedet */
+  width: 100%;
+}
+
+.koncept-img img {
+  width: 70%;
+  border-radius: 10px;
+  display: block;
+}
+
+.img-tekst {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  font-size: 25px;
+  font-family: "raleBold";
+  width: 70%;
+}
+
+/* Brødtekst */
+.koncept-tekst {
+  background: #f2f2f2;
+  padding: 16px;
+  border-radius: 10px;
+  width: 80%;
+}
+
 /* LOG-IND */
 
 /* Glemt kodeord */
@@ -484,5 +538,33 @@ p {
     max-width: 800px;
     gap: 32px;
     margin: auto;
+  }
+
+  /* INDEX KONCEPT SEKTION */
+  .koncept-wrapper {
+    flex-direction: row;
+    max-width: 850px;
+    margin: auto;
+  }
+
+  .koncept-img,
+  .koncept-tekst {
+    flex: 1;
+  }
+
+  .koncept-tekst {
+    font-size: 18px;
+    padding: 24px;
+    text-align: left;
+  }
+
+  .koncept-img img {
+    width: 100%;
+  }
+
+  .img-tekst {
+    font-size: 34px;
+    left: 30px;
+    width: 60%;
   }
 }
