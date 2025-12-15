@@ -3,10 +3,10 @@ main {
     padding: 1rem;
 }
 h1, h2 {
-    font-family: montsSemiBold;
+    font-family: raleSemiBold;
 }
 h3 {
-    font-family: montsRegular;
+    font-family: raleRegular;
 }
 p {
     font-family: openRegular;

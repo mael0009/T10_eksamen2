@@ -39,7 +39,7 @@ function showFordele(data) {
         `<h1 class="brand_name">${item.brandname}</h1>
         <section class="grid_2-1">
              <div><img src="https://pghwxgkhepdabfkrvtkq.supabase.co/storage/v1/object/public/images/imgs/${item.image}"></div>
-             <div><p>${item.description}</p></div>
+             <div><p>${item.description_benefits}</p></div>
         </section>
         <h2>Bæredygtige fordele fra ${item.brandname}</h2>
          `;
@@ -47,7 +47,7 @@ function showFordele(data) {
 
     // Viser fordelene som er et array i vores data i Supabase
     // Vi laver et card for hver fordel der findes
-    data[0].fordele.forEach(item => {
+    data[0].benefits.forEach(item => {
         markup += 
         `<article class="fordel_card">
         <h3>${item}</h3>
