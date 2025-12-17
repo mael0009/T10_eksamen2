@@ -7,4 +7,4 @@ burgerBtn.addEventListener("click", () => {
     mobilNav.classList.toggle("show");
 });
 
-// SLIDESHOW BILLEDER FORSIDE
+

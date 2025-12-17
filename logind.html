@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="header.js" defer></script>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <script src="JS/header.js" defer></script>
     <title>Document</title>
   </head>
 
@@ -20,7 +20,7 @@
 
       <nav class="mobil-nav" id="mobil-nav">
         <ul>
-          <li><a href="#" class="hover-line">Samarbejdspartnere</a></li>
+          <li><a href="listview.html" class="hover-line">Samarbejdspartnere</a></li>
           <li><a href="logind.html" class="hover-line">Log ind</a></li>
         </ul>
       </nav>
@@ -32,12 +32,12 @@
       <hr />
 
       <!-- FORMULAR -->
-
+<section>
       <form class="login-form" action="/login" method="post">
         <!-- E-MAIL FELT -->
 
         <!-- Label er knyttet til input via 'for' og 'id' -->
-        <label for="email">Email</label>
+        <label class="hidden" for="email">Email</label>
 
         <!-- Inputfeltet accepterer kun gyldige e-mailformater -->
         <!-- 'required' betyder at feltet skal udfyldes -->
@@ -46,7 +46,7 @@
         <!-- KODEORD FELT -->
 
         <!-- 'type=password' skjuler tegn, 'minlength' kræver minimum 6 tegn til kodeord -->
-        <label for="password">Kodeord</label>
+        <label class="hidden" for="password">Kodeord</label>
         <input type="password" id="password" name="password" required minlength="6" placeholder="Kodeord" />
 
         <a href="#" class="glemt">Glemt kodeord?</a>
@@ -57,26 +57,51 @@
         <p class="opret">Har du ikke en profil? <a href="#">Opret konto</a></p>
       </form>
     </main>
+  </section>
 
-    <footer class="footer">
-      <div class="footer-left">
-        <div class="footer-link">
-          <a href="#" class="hover-line">Dankort.dk</a>
-        </div>
 
-        <div class="footer-social">
-          <div class="social-icons">
-            <img src="assets/instagram.svg" alt="instagram" />
-            <img src="assets/tiktok.svg" alt="tiktok" />
-          </div>
-        </div>
+  <footer class="footer">
+    <div class="footer-left">
+  
+      <div class="footer-link">
+     
+
+        <p>
+          <span class="footer-p1">Har du brug for hjælp?</span>
+          Kontakt os <br>
+          <a href="mailto:dankort-point@gmail.dk">dankort-point@gmail.dk</a><br>
+          <a href="tel:+4566778899">+45 66778899</a>
+          
+        </p>
+  
+     
+
+        <p>
+          <span class="footer-p1">Har du ikke et Dankort?</span><br>
+          Kontakt din bank
+        </p>
+
+        <p><a href="#">Dankort.dk</a></p>
       </div>
 
-      <div class="footer-right">
-        <p>Dankort-groen@gmail.com</p>
-        <p>+45 66778899</p>
-        <img src="assets/Dk-logo.svg" alt="DK-logo" class="dk-footer-logo" />
+      <div class="footer-social">
+        <div class="social-icons">
+          <img src="assets/instagram.svg" alt="Instagram" loading="lazy" />
+          <img src="assets/tiktok.svg" alt="TikTok" loading="lazy" />
+          <img src="assets/facebook.svg" alt="Facebook" loading="lazy" />
+        </div>
       </div>
-    </footer>
+    
+    </div>
+  
+    <div class="footer-right">
+      <p class="footer-slogan">
+      Forbrug med omtanke
+      </p>
+
+
+      <img src="assets/Dk-logo.svg" alt="Dankort logo" class="dk-footer-logo" />
+    </div>
+  </footer>
   </body>
 </html>

@@ -1,0 +1,106 @@
+/* HERO */
+.brand_name {
+  display: block;
+  border-bottom: 1px solid black;
+}
+.grid_2-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding-top: 24px;
+}
+
+.grid_2-1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* CARDS */
+
+.fordele {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px; /* stor afstand */
+  margin-bottom: 60px; /* sektion-bund */
+}
+
+.fordel_card {
+  padding: 24px; /* sektion-padding */
+  max-width: none;
+  background-color: #f2f2f2;
+  text-align: center;
+  box-shadow: 0px 4px 4px #80808054;
+  border-radius: 25px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fordel_card p {
+  font-family: "openSemiBold";
+}
+
+/* GRØNNE KNAP  */
+.green_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-color: #f5f5f5;
+  color: #277d22;
+  padding: 7px 25px;
+  border-radius: 50px;
+  border: 0.5px solid #277d22;
+  transition: 0.2s;
+  text-decoration: none;
+  font-family: raleRegular;
+  cursor: pointer;
+}
+.green_btn:hover {
+  background-color: #eaeaea;
+}
+.green_arrow {
+  width: 30px;
+  height: 30px;
+}
+
+/* LOG IND SECTION */
+.log_ind {
+  text-align: center;
+}
+.green_text {
+  color: #369331;
+}
+.log_ind p {
+  max-width: 350px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* DESKTOP-VIEW */
+@media (min-width: 768px) {
+  .hero {
+    margin-bottom: 60px;
+  }
+
+  .grid_2-1 {
+    max-width: 800px;
+    margin: 0 auto 60px; /* sektion-bund */
+    gap: 32px; /* stor afstand */
+  }
+
+  .grid_2-1 p {
+    margin-top: 16px;
+  }
+
+  .fordele {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    max-width: 800px;
+    margin: 0 auto 60px; /* sektion-bund */
+  }
+}

@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="header.js" defer></script>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <script src="JS/header.js" defer></script>
     <title>Document</title>
   </head>
   <body>
     <header class="mobil-header">
-      <a href="index.html"> <img src="assets/Dk-logo.svg" alt="DK-logo" class="logo" /></a>
+      <a href="index.html"> <img src="assets/dk-logo.svg" alt="DK-logo" class="logo" /></a>
 
       <button class="burger" id="burger-btn">
         <span></span>
@@ -25,11 +25,13 @@
       </nav>
     </header>
 
+    <div class="lottie">
+      <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.5/dist/dotlottie-wc.js" type="module"></script>
+      <dotlottie-wc src="https://lottie.host/12220f1e-ffb8-4047-9d2a-883bc87ea1fc/3oyoLnvxto.lottie" style="width: 100%; height: 100%" autoplay></dotlottie-wc>
+    </div>
+
     <main>
-      <div class="lottie">
-        <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.5/dist/dotlottie-wc.js" type="module"></script>
-        <dotlottie-wc src="https://lottie.host/12220f1e-ffb8-4047-9d2a-883bc87ea1fc/3oyoLnvxto.lottie" style="width: 100%; height: 100%" autoplay></dotlottie-wc>
-      </div>
+     
 
       <section class="steps-section">
         <h1>
@@ -39,7 +41,7 @@
 
         <hr />
 
-        <h2 class="center">Sådan fungerer det</h2>
+        <h3 class="center">Sådan fungerer det</h>
 
         <div class="grid-1-1-1">
           <div class="step1">
@@ -68,14 +70,15 @@
         </div>
 
         <div class="btn1-container">
-          <button class="btn-1 red">SE DINE GRØNNE POINT</button>
+          <a href="logind.html"> <button class="red_btn">SE DINE GRØNNE POINT</button></a>
         </div>
       </section>
 
       <section class="koncept">
         <h2>Hvad går konceptet ud på?</h2>
+     
 
-        <div class="koncept-wrapper">
+        <div class="koncept-grid">
           <div class="koncept-img">
             <img src="assets/koncept-forside.webp" alt="Natur" />
             <p class="img-tekst">
@@ -83,10 +86,14 @@
               om fremtiden
             </p>
           </div>
+
+          <div class="koncept-box">
           <p class="koncept-tekst">
             Grønne Point er Dankorts nye belønningssystem, der belønner de bæredygtige valg i hverdagen. Når du bruger dit Dankort hos vores grønne samarbejdspartnere optjener du Grønne Point helt automatisk. I stedet for at motivere til merforbrug
             belønner Grønne Point de valg, butikker og foreninger, der allerede gør en positiv forskel. Det er en enkel måde at støtte en mere bæredygtig fremtid, hver gang du betaler med omtanke.
           </p>
+
+        </div>
         </div>
       </section>
 
@@ -96,50 +103,71 @@
         <div class="grid-1-1">
           <div class="border-mobil">
             <p>
-              Med Grønne Point hos <br />
-              Dankort,kan du få <br />
-              bæredygtige fordele <br />
-              og belønninger, <br />
-              hos vores udvalgte <br />
-              samarbejdspartnere <br />
+              Med Grønne Point hos 
+              Dankort,kan du få 
+              bæredygtige fordele 
+              og belønninger, 
+              hos vores udvalgte 
+              samarbejdspartnere 
               som f.eks. Emmery’s, Kirppu m.m.
             </p>
-            <button class="btn-1 red">SAMARBEJDSPARTNERE</button>
+            <a href="listview.html"> <button class="red_btn">SAMARBEJDSPARTNERE</button></a>
           </div>
           <img class="galleri-mobil" src="assets/galleri-mobil.webp" alt="Galleri" loading="lazy" />
           <div class="galleri-desktop">
-            <img class="img2 desktop-only" src="assets/Redmaden.webp" alt="Redmaden" loading="lazy" />
+            <img class="img2 desktop-only" src="assets/redmaden.webp" alt="Redmaden" loading="lazy" />
             <img class="img3 desktop-only" src="assets/sport24.webp" alt="Sport24" loading="lazy" />
-            <img class="img4 desktop-only" src="assets/Kirppu.webp" alt="Kirppu" loading="lazy" />
-            <img class="img5 desktop-only" src="assets/forside-kop.webp" alt="Emmerys" loading="lazy" />
+            <img class="img4 desktop-only" src="assets/kirppu.webp" alt="Kirppu" loading="lazy" />
+            <img class="img5 desktop-only" src="assets/emmerys.webp" alt="Emmerys" loading="lazy" />
           </div>
         </div>
       </section>
     </main>
-
+    
     <footer class="footer">
       <div class="footer-left">
+    
         <div class="footer-link">
-          <p><a href="#" class="hover-line">Dankort.dk</a></p>
-          <p class="footer-p">Har du ikke et Dankort? Kontakt din bank</p>
+       
+  
+          <p>
+            <span class="footer-p1">Har du brug for hjælp?</span>
+            Kontakt os <br>
+            <a href="mailto:dankort-point@gmail.dk">dankort-point@gmail.dk</a><br>
+            <a href="tel:+4566778899">+45 66778899</a>
+            
+          </p>
+    
+       
+
+          <p>
+            <span class="footer-p1">Har du ikke et Dankort?</span><br>
+            Kontakt din bank
+          </p>
+
+          <p><a href="#">Dankort.dk</a></p>
         </div>
 
         <div class="footer-social">
           <div class="social-icons">
-            <img src="assets/instagram.svg" alt="instagram" />
-            <img src="assets/tiktok.svg" alt="tiktok" />
+            <img src="assets/instagram.svg" alt="Instagram" loading="lazy" />
+            <img src="assets/tiktok.svg" alt="TikTok" loading="lazy" />
+            <img src="assets/facebook.svg" alt="Facebook" loading="lazy" />
           </div>
+          
         </div>
+      
       </div>
-
+    
       <div class="footer-right">
-        <p>Brug for hjælp? Tag kontakt</p>
-        <p>
-          Dankort-point@gmail.com <br />
-          +45 66778899
+        <p class="footer-slogan">
+        Forbrug med omtanke
         </p>
-        <img src="assets/Dk-logo.svg" alt="DK-logo" class="dk-footer-logo" />
+
+  
+        <img src="assets/Dk-logo.svg" alt="Dankort logo" class="dk-footer-logo" />
       </div>
     </footer>
+
   </body>
 </html>

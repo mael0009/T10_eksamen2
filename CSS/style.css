@@ -2,46 +2,43 @@
 
 @font-face {
   font-family: "openRegular";
-  src: url(fonts/Open_Sans/static/OpenSans-Regular.ttf);
+  src: url(/fonts/Open_Sans/static/OpenSans-Regular.ttf);
 }
 
 @font-face {
   font-family: "openSemiBold";
-  src: url(fonts/Open_Sans/static/OpenSans-SemiBold.ttf);
+  src: url(/fonts/Open_Sans/static/OpenSans-SemiBold.ttf);
 }
 
 @font-face {
   font-family: "raleRegular";
-  src: url(fonts/Raleway/static/Raleway-Regular.ttf);
+  src: url(/fonts/Raleway/static/Raleway-Regular.ttf);
 }
 
 @font-face {
   font-family: "raleSemiBold";
-  src: url(fonts/Raleway/static/Raleway-SemiBold.ttf);
+  src: url(/fonts/Raleway/static/Raleway-SemiBold.ttf);
 }
 
 @font-face {
   font-family: "raleBold";
-  src: url(fonts/Raleway/static/Raleway-Bold.ttf);
+  src: url(/fonts/Raleway/static/Raleway-Bold.ttf);
 }
 
 /* GENERAL CSS */
-
-.mobil-header {
+body {
+  margin: 0;
   font-family: "openRegular";
+  line-height: 1.5;
+  color: black;
 }
 
-.footer {
-  font-family: "openRegular";
+main {
+  margin: 3rem;
 }
 
 .green {
   color: #369331;
-}
-
-h1 {
-  font-family: "raleSemiBold";
-  text-align: left;
 }
 
 .center {
@@ -49,29 +46,55 @@ h1 {
   text-align: center;
 }
 
-h2 {
-  font-family: "raleSemiBold";
+.left {
   text-align: left;
 }
 
 p {
   font-family: "openRegular";
+  line-height: 1.5;
 }
 
-.left {
-  text-align: left;
+h1,
+h2 {
+  font-family: "raleSemiBold";
+  margin-bottom: 0.5rem;
 }
 
-.btn-1 {
-  font-family: "openRegular";
-  border-radius: 30px;
-  background-color: #e31f28;
+h3 {
+  font-family: "raleRegular";
+}
+
+hr {
+  width: 85%;
+  margin: 8px;
+}
+
+/* .grid-1-1,
+.grid-1-1-1,
+.partners,
+.fordele {
+  gap: 16px;
+} */
+
+/* KNAPPER OG HOVER */
+
+/* RØD KNAP PÅ ALLE SIDER */
+.red_btn {
+  display: inline-block;
+  background-color: #e21e27;
   color: white;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding: 7px 25px;
+  border-radius: 50px;
+  transition: 0.2s;
+  text-decoration: none;
   border: none;
+  font-family: "raleSemiBold";
+  cursor: pointer;
+}
+.red_btn:hover,
+.red_arrow_btn:hover {
+  background-color: #c41b23;
 }
 
 .btn1-container {
@@ -79,7 +102,45 @@ p {
   justify-content: center;
 }
 
-/* HOVER FOOTER OG HEADER */
+.btn_wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* PIL KNAP PÅ CARDS */
+.red_arrow_btn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 45px;
+  height: 45px;
+  background-color: #e21e27;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* LOG IND KNAP  */
+.login-btn {
+  display: inline-block;
+  background-color: #e21e27;
+  color: white;
+  padding: 7px 25px;
+  border-radius: 50px;
+  border: none;
+  font-family: "raleSemiBold";
+  cursor: pointer;
+  transition: 0.2s;
+  align-self: center;
+}
+
+.login-btn:hover {
+  background-color: #c41b23;
+}
+
+/* HOVER HEADER */
 .hover-line {
   text-decoration: none;
   color: #000;
@@ -95,23 +156,13 @@ p {
   bottom: -3px; /* Lige under teksten */
   width: 0%; /* Start-bredde = 0 (så den kan “slide ind”) */
   height: 2px; /* Tykkelsen på stregen */
-  background: #e31f28;
+  background: #e21e27;
   transition: width 0.3s ease; /* Animation der udvider bredden */
 }
 
 /* Når man holder musen over linket */
 .hover-line:hover::after {
   width: 100%; /* Stregen udvider sig og bliver fuld længde */
-}
-
-/* HOVER RØDE BUTTONS */
-
-.red {
-  transition: transform 0.2s ease; /* Gør det muligt at animere forstørrelsen */
-}
-
-.red:hover {
-  transform: scale(1.1); /* forstørre ikon */
 }
 
 /**** MOBILE FIRST VERSION ****/
@@ -123,7 +174,7 @@ p {
   justify-content: space-between;
   align-items: center;
   padding: 14px 20px;
-  background: #f2f2f2;
+  background: #e9e9e9;
 }
 
 /* Logo */
@@ -165,7 +216,6 @@ p {
   right: 0;
   width: 200px;
   border-radius: 8px;
-
   z-index: 1000; /* så dropdown-menu ligger over header */
 }
 
@@ -194,22 +244,31 @@ p {
 
 .footer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding: 1rem;
+}
+footer a {
+  color: black;
+  text-decoration: none;
+  transition: 0.2s;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-slogan {
+  font-size: 24px;
+  font-family: "raleBold";
 }
 
 /* Venstre boks */
 .footer-left {
   flex: 1;
-  background: #f2f2f2;
-  padding: 20px;
-  border-radius: 20px;
+  background: #e9e9e9;
+  padding: 24px;
+  border-radius: 25px;
   display: flex;
   flex-direction: column;
-}
-
-.footer-left a {
-  text-decoration: underline;
 }
 
 /* ikoner */
@@ -227,12 +286,11 @@ p {
 
 /* Højre boks */
 .footer-right {
-  display: flex;
   flex: 1;
   flex-direction: column;
-  background: #e31f28;
-  padding: 20px;
-  border-radius: 20px;
+  background: #e21e27;
+  padding: 24px;
+  border-radius: 25px;
   color: #fff;
   justify-content: space-between;
   position: relative;
@@ -246,15 +304,11 @@ p {
   bottom: 20px;
 }
 
-.footer-p {
-  font-size: 12px;
+.footer-p1 {
+  font-family: "openSemiBold";
 }
 
 /* INDEX SÅDAN FUNGERE DET */
-
-.steps-section {
-  padding-bottom: 60px;
-}
 
 .step1 {
   padding-top: 16px;
@@ -273,7 +327,7 @@ p {
 }
 
 .grid-1-1-1 {
-  padding-bottom: 30px;
+  padding-bottom: 16px;
 }
 
 /*  INDEX HVOR KAN DU BRUGE DINE GRØNNE POINT */
@@ -282,7 +336,6 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
-  padding-top: 16px;
   padding-bottom: 30px;
 }
 
@@ -293,12 +346,18 @@ p {
   object-fit: cover;
 }
 
+/* TESKT BOKSEN MED GRÅ BAGGRUND */
 .border-mobil {
-  display: block;
-  background-color: #f2f2f2;
-  border-radius: 10px;
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  background-color: #e9e9e9;
+  border-radius: 25px;
   padding: 16px;
+}
+
+.border-mobil a {
+  margin-top: auto;
+  align-self: center;
 }
 
 .desktop-only {
@@ -311,22 +370,9 @@ p {
 
 .partner-sektion {
   display: grid;
-  gap: 16px;
 }
 
 /* INDEX KONCEPT SEKTION */
-
-.koncept {
-  padding-bottom: 24px;
-}
-
-.koncept-wrapper {
-  display: flex;
-  flex-direction: column;
-  background: #f2f2f2;
-  border-radius: 10px;
-  padding: 16px;
-}
 
 /* Billedet */
 .koncept-img {
@@ -335,8 +381,8 @@ p {
 }
 
 .koncept-img img {
-  width: 70%;
-  border-radius: 10px;
+  width: 100%;
+  border-radius: 25px;
   display: block;
 }
 
@@ -345,17 +391,20 @@ p {
   top: 20px;
   left: 20px;
   color: white;
-  font-size: 25px;
+  font-size: 35px;
   font-family: "raleBold";
   width: 70%;
 }
 
+.koncept-box {
+  background-color: #e9e9e9;
+  border-radius: 25px;
+}
+
 /* Brødtekst */
 .koncept-tekst {
-  background: #f2f2f2;
   padding: 16px;
   border-radius: 10px;
-  width: 80%;
 }
 
 /* LOG-IND */
@@ -389,23 +438,30 @@ p {
   padding: 16px;
   border-radius: 30px;
   border: none;
-  background: #f2f2f2;
+  background: #e9e9e9;
   font-size: 16px;
 }
 
-/* log ind knap */
-.login-btn {
-  background: #e31f28;
-  color: #fff;
-  border: none;
-  padding: 14px 28px;
-  border-radius: 30px;
-  font-size: 16px;
-  align-self: center; /* centrerer knappen */
+/* skjuler E-mail og Kodeord i layout men beholder for skærmlæsere */
+.hidden {
+  position: absolute; /* clip virker kun hvis dette er tilføjet */
+  width: 1px; /* skjuler i layout men beholder i DOM'en */
+  height: 1px; /* skjuler i layout men beholder i DOM'en */
+  overflow: hidden; /* skjuler indholdet */
+  clip: rect(0, 0, 0, 0); /* fjerner synlighed men eksisterer stadig */
 }
 
 /****** DESKTOP ******/
 @media (min-width: 768px) {
+  main {
+    padding: 6rem;
+  }
+
+  hr {
+    width: 60%;
+    margin: 8px;
+  }
+
   /* HEADER */
   .burger {
     display: none; /* skjul burger */
@@ -442,21 +498,31 @@ p {
   }
 
   /* FOOTER */
+
+  .footer-link {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 32px; /* stor afstand */
+    row-gap: 16px; /* standard luft */
+  }
+
   .footer {
     flex-direction: row;
   }
+  .footer-slogan {
+    font-size: 30px;
+    font-family: "raleBold";
+    max-width: 260px;
+    line-height: 1.2;
+  }
 
-  .footer-left,
   .footer-right {
-    flex: 1;
+    flex: 1; /* Så den fylder 1 ud af 3 */
   }
-
-  .footer-left a {
-    font-size: larger;
-  }
-
-  .footer-right p {
-    font-size: larger;
+  /* Hvor meget den venstre box fylder */
+  .footer-left {
+    flex: 2;
+    justify-content: space-between;
   }
 
   /* INDEX SÅDAN FUNGERE DET*/
@@ -467,6 +533,9 @@ p {
   .grid-1-1-1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    max-width: 800px;
+    margin: auto;
+    gap: 8px;
   }
 
   /* INDEX HVOR KAN DU BRUGE DINE GRØNNE POINT*/
@@ -489,7 +558,6 @@ p {
     grid-template-columns: 2fr 1fr 1fr; /* tekst, img1, img2 */
     grid-template-rows: auto auto; /* række 1 og 2 */
     gap: 16px;
-    max-width: 850px;
     margin: 0 auto;
   }
 
@@ -497,9 +565,8 @@ p {
   .border-mobil {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-    background: #f2f2f2;
+    background: #e9e9e9;
     padding: 24px;
-    border-radius: 10px;
   }
 
   /* Billede 1 – øverste række */
@@ -530,40 +597,41 @@ p {
   .galleri-desktop img {
     width: 100%;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 25px;
   }
 
   /* LOG-IND SIDE */
   .login-form {
+    gap: 16px;
     max-width: 800px;
-    gap: 32px;
     margin: auto;
+    padding: 32px;
   }
 
   /* INDEX KONCEPT SEKTION */
-  .koncept-wrapper {
-    flex-direction: row;
-    max-width: 850px;
-    margin: auto;
-  }
-
-  .koncept-img,
-  .koncept-tekst {
-    flex: 1;
+  .koncept-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
   }
 
   .koncept-tekst {
     font-size: 18px;
-    padding: 24px;
     text-align: left;
   }
 
   .koncept-img img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .koncept-img {
+    height: 100%;
   }
 
   .img-tekst {
-    font-size: 34px;
+    font-size: 44px;
     left: 30px;
     width: 60%;
   }

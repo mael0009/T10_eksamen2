@@ -1,58 +1,73 @@
 <!DOCTYPE html>
 <html lang="da">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="singleview.css" />
-    <script src="header.js" defer></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/singleview.css" />
+    <script src="JS/header.js" defer></script>
+    <script src="JS/singleview.js" type="module"></script>
     <title>Singleview</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="mobil-header">
-        <a href="index.html"> <img src="assets/Dk-logo.svg" alt="DK-logo" class="logo" /></a>
-  
-        <button class="burger" id="burger-btn">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-  
-        <nav class="mobil-nav" id="mobil-nav">
-          <ul>
-            <li><a href="listview.html" class="hover-line">Samarbejdspartnere</a></li>
-            <li><a href="#" class="hover-line">Log ind</a></li>
-          </ul>
-        </nav>
+      <a href="index.html"> <img src="assets/Dk-logo.svg" alt="DK-logo" class="logo" /></a>
+
+      <button class="burger" id="burger-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="mobil-nav" id="mobil-nav">
+        <ul>
+          <li><a href="listview.html" class="hover-line">Samarbejdspartnere</a></li>
+          <li><a href="logind.html" class="hover-line">Log ind</a></li>
+        </ul>
+      </nav>
     </header>
+
     <main>
-        <section class="hero"></section>
-        <section class="fordele"></section>
-        <section class="log_ind">
-            <p>Du kan indløse dine <span class="green_text">Grønne Point</span>, ved at logge ind og trykke “indløs” på den valgte fordel</p>
-            <a class="red_btn" href="logind.html">LOG IND</a>
-        </section>
+      <section class="hero"></section>
+      <section class="fordele"></section>
+      <section class="log_ind">
+        <p>Du kan indløse dine <span class="green_text">Grønne Point</span>, ved at logge ind og trykke “indløs” på den valgte fordel</p>
+        <a class="red_btn" href="logind.html">LOG IND</a>
+      </section>
     </main>
-    <script src="singleview.js" type="module"></script>
+
     <footer class="footer">
-        <div class="footer-left">
-          <div class="footer-link">
-            <a href="#" class="hover-line">Dankort.dk</a>
-          </div>
-  
-          <div class="footer-social">
-            <div class="social-icons">
-              <img src="assets/instagram.svg" alt="instagram" />
-              <img src="assets/tiktok.svg" alt="tiktok" />
-            </div>
+      <div class="footer-left">
+        <div class="footer-link">
+          <p>
+            <span class="footer-p1">Har du brug for hjælp?</span>
+            Kontakt os <br />
+            <a href="mailto:dankort-point@gmail.dk">dankort-point@gmail.dk</a><br />
+            <a href="tel:+4566778899">+45 66778899</a>
+          </p>
+
+          <p>
+            <span class="footer-p1">Har du ikke et Dankort?</span><br />
+            Kontakt din bank
+          </p>
+
+          <p><a href="#">Dankort.dk</a></p>
+        </div>
+
+        <div class="footer-social">
+          <div class="social-icons">
+            <img src="assets/instagram.svg" alt="Instagram" loading="lazy" />
+            <img src="assets/tiktok.svg" alt="TikTok" loading="lazy" />
+            <img src="assets/facebook.svg" alt="Facebook" loading="lazy" />
           </div>
         </div>
-  
-        <div class="footer-right">
-          <p>Dankort-groen@gmail.com</p>
-          <p>+45 66778899</p>
-          <img src="assets/Dk-logo.svg" alt="DK-logo" class="dk-footer-logo" />
-        </div>
+      </div>
+
+      <div class="footer-right">
+        <p class="footer-slogan">Forbrug med omtanke</p>
+
+        <img src="assets/Dk-logo.svg" alt="Dankort logo" class="dk-footer-logo" />
+      </div>
     </footer>
-</body>
+  </body>
 </html>

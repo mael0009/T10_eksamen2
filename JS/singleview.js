@@ -39,9 +39,9 @@ function showFordele(data) {
         `<h1 class="brand_name">${item.brandname}</h1>
         <section class="grid_2-1">
              <div><img src="https://pghwxgkhepdabfkrvtkq.supabase.co/storage/v1/object/public/images/imgs/${item.image}"></div>
-             <div><p>${item.description_benefits}</p></div>
+             <div>        <h2>Bæredygtige fordele fra ${item.brandname}</h2>
+        <p>${item.description_benefits}</p></div>
         </section>
-        <h2>Bæredygtige fordele fra ${item.brandname}</h2>
          `;
     });
 
@@ -50,7 +50,7 @@ function showFordele(data) {
     data[0].benefits.forEach(item => {
         markup += 
         `<article class="fordel_card">
-        <h3>${item}</h3>
+        <p>${item}</p>
         <a class="green_btn">INDLØS
             <span class="green_arrow"><svg width="30" height="30" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" y="0.5" width="54.7857" height="55.358" rx="27.3929" stroke="#369331" stroke-linecap="round"/>
              <path d="M14.0001 27.6598C13.7348 27.6598 13.4805 27.7651 13.293 27.9527C13.1054 28.1402 13.0001 28.3946 13.0001 28.6598C13.0001 28.925 13.1054 29.1794 13.293 29.3669C13.4805 29.5544 13.7348 29.6598 14.0001 29.6598C14.4334 29.6598 14.8667 29.6598 15.3001 29.6598C23.1001 29.6598 30.9001 29.6598 38.7001 29.6598C39.1334 29.6598 39.5667 29.6598 40.0001 29.6598C40.2653 29.6598 40.5196 29.5544 40.7072 29.3669C40.8947 29.1794 41.0001 28.925 41.0001 28.6598C41.0001 28.3946 40.8947 28.1402 40.7072 27.9527C40.5196 27.7651 40.2653 27.6598 40.0001 27.6598C39.5667 27.6598 39.1334 27.6598 38.7001 27.6598C30.9001 27.6598 23.1001 27.6598 15.3001 27.6598C14.8667 27.6598 14.4334 27.6598 14.0001 27.6598Z" fill="#369331"/>
