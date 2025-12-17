@@ -68,6 +68,10 @@
 }
 
 /* TRIN */
+.tre_trin {
+  padding-top: 60px;
+}
+
 .trin {
   display: grid;
   grid-template-columns: 1fr 4fr;
