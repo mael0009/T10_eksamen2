@@ -61,6 +61,10 @@ h2 {
   margin-bottom: 0.5rem;
 }
 
+.stor-h2 {
+  font-size: 28px;
+}
+
 h3 {
   font-family: "raleRegular";
 }
@@ -69,13 +73,6 @@ hr {
   width: 85%;
   margin: 8px;
 }
-
-/* .grid-1-1,
-.grid-1-1-1,
-.partners,
-.fordele {
-  gap: 16px;
-} */
 
 /* KNAPPER OG HOVER */
 
@@ -309,6 +306,9 @@ footer a:hover {
 }
 
 /* INDEX SÅDAN FUNGERE DET */
+.steps-section {
+  padding-bottom: 60px;
+}
 
 .step1 {
   padding-top: 16px;
@@ -399,6 +399,10 @@ footer a:hover {
 .koncept-box {
   background-color: #e9e9e9;
   border-radius: 25px;
+}
+
+.koncept {
+  padding-bottom: 60px;
 }
 
 /* Brødtekst */
@@ -616,7 +620,6 @@ footer a:hover {
   }
 
   .koncept-tekst {
-    font-size: 18px;
     text-align: left;
   }
 
