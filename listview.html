@@ -1,129 +1,162 @@
 <!DOCTYPE html>
 <html lang="da">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="listview.css" />
-    <script src="header.js" defer></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/listview.css" />
+    <script src="JS/header.js" defer></script>
+    <script src="JS/listview.js" type="module"></script>
     <title>Listview</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="mobil-header">
-        <a href="index.html"> <img src="assets/Dk-logo.svg" alt="DK-logo" class="logo" /></a>
-  
-        <button class="burger" id="burger-btn">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-  
-        <nav class="mobil-nav" id="mobil-nav">
-          <ul>
-            <li><a href="listview.html" class="hover-line">Samarbejdspartnere</a></li>
-            <li><a href="#" class="hover-line">Log ind</a></li>
-          </ul>
-        </nav>
+      <a href="index.html"> <img src="assets/Dk-logo.svg" alt="DK-logo" class="logo" /></a>
+
+      <button class="burger" id="burger-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="mobil-nav" id="mobil-nav">
+        <ul>
+          <li><a href="listview.html" class="hover-line">Samarbejdspartnere</a></li>
+          <li><a href="logind.html" class="hover-line">Log ind</a></li>
+        </ul>
+      </nav>
     </header>
-    
+
     <section class="hero_section">
-        <img src="assets/hero_listview.webp" alt="hero image">
-        <h1>Samarbejdspartnere og Grønne Point</h1>
-        <a class="red_btn" href="logind.html">LOG IND OG SE DINE GRØNNE POINT</a>
+      <img src="assets/hero-listview.webp" alt="hero image" />
+      <h1>Samarbejdspartnere <br />og Grønne Point</h1>
+      <a href="logind.html"><button class="red_btn">LOG IND OG SE DINE GRØNNE POINT</button></a>
     </section>
+
     <main>
-        <h1>Hvad gør vores samarbejdspartnere grønne?</h1>
-        <section class="partners"></section>
-        <div class="btn_wrapper"><a class="red_btn" href="/" >LOG IND OG SE GRØNNE POINT</a></div>
-        <section>
-            <h2>Tre trin til bæredygtige belønninger</h2>
-            <h3>Sammen kan vi gøre mere</h3>
-            <div class="trin">
-                <div class="icon"><svg width="22" height="46" viewBox="0 0 22 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g filter="url(#filter0_g_592_270)">
-                    <path d="M16.7227 42.3251C16.586 42.4122 15.8299 42.6118 15.5566 42.6844C14.0656 43.0763 11.357 42.4957 10.8351 40.5795C10.1642 38.0826 11.0588 32.0873 11.1457 29.3001C11.2824 24.9887 11.2327 20.6627 11.5309 16.3658C10.7854 16.7578 8.99159 18.4769 8.097 19.1156C5.18958 21.206 1.82254 19.1427 3.06502 15.5861C3.18927 15.2232 5.93973 11.3866 6.27521 10.9076C7.2195 9.55752 10.9097 4.75254 11.9161 3.86703C14.9602 1.2105 18.1534 3.86702 18.551 7.96069C19.3089 15.8722 18.1285 25.7871 17.7558 33.8293C17.6812 35.4842 18.1409 40.2166 17.4203 41.1602C17.1345 41.5376 17.4607 41.805 17.0009 42.0953L16.7227 42.3251Z" fill="#369331"/>
-                    </g>
-                    <defs>
-                    <filter id="filter0_g_592_270" x="-0.000195265" y="4.88758e-05" width="21.6" height="45.6" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                    <feTurbulence type="fractalNoise" baseFrequency="1.6666666269302368 1.6666666269302368" numOctaves="3" seed="4478" />
-                    <feDisplacementMap in="shape" scale="5.5999999046325684" xChannelSelector="R" yChannelSelector="G" result="displacedImage" width="100%" height="100%" />
-                    <feMerge result="effect1_texture_592_270">
-                    <feMergeNode in="displacedImage"/>
-                    </feMerge>
-                    </filter>
-                    </defs>
-                    </svg></div>
-                    <div><p>Når du betaler med Dankort hos vores samarbejdspartnere, optjener du automatisk grønne point.</p></div>
-                <div class="icon"><svg width="22" height="46" viewBox="0 0 22 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g filter="url(#filter0_g_592_271)">
-                    <path d="M2.83399 42.174C2.93656 32.6895 22.6642 11.5196 12.0995 8.95835C10.8686 8.83829 9.50104 9.15844 8.71467 10.399C7.31288 12.4 7.89411 15.4014 5.535 15.9216C4.1674 16.3218 3.24427 14.2008 3.79131 12.3199C7.62059 -5.32839 24.1343 3.47576 17.057 23.085C15.2791 29.0078 11.655 32.6095 9.09076 37.7719C9.91132 39.0926 13.3303 37.972 14.8005 38.2522C16.6809 38.1721 19.211 39.3327 18.493 41.7738C16.7493 43.6547 13.7748 42.2941 10.1848 42.6943C6.73165 42.5342 4.44092 43.0544 2.93656 42.3741L2.7998 42.134L2.83399 42.174Z" fill="#369331"/>
-                    </g>
-                    <defs>
-                    <filter id="filter0_g_592_271" x="-0.000195265" y="4.88758e-05" width="21.6" height="45.6" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                    <feTurbulence type="fractalNoise" baseFrequency="1.6666666269302368 1.6666666269302368" numOctaves="3" seed="935" />
-                    <feDisplacementMap in="shape" scale="5.5999999046325684" xChannelSelector="R" yChannelSelector="G" result="displacedImage" width="100%" height="100%" />
-                    <feMerge result="effect1_texture_592_271">
-                    <feMergeNode in="displacedImage"/>
-                    </feMerge>
-                    </filter>
-                    </defs>
-                    </svg></div>
-                    <div><p>Log ind og se din aktuelle pointsaldo og følge, hvor mange point du har samlet.</p></div>
-                <div class="icon"><svg width="24" height="48" viewBox="0 0 24 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g filter="url(#filter0_g_592_272)">
-                    <g filter="url(#filter1_g_592_272)">
-                    <path d="M14.9661 44.7999C13.6453 44.7999 12.0824 43.5524 11.0698 41.2237C9.50681 38.2296 9.37473 32.4079 11.8182 33.5722C12.9849 34.7366 13.029 38.8118 14.3718 39.6019C17.1895 41.598 18.5323 32.7821 17.2335 29.497C16.5071 26.9603 14.79 25.1306 14.6359 22.1782C14.746 19.3504 16.9914 19.2257 17.3436 16.3564C17.938 13.5702 17.5197 9.41183 15.9788 8.28906C14.8341 7.33262 13.8875 8.53856 13.2711 10.6178C12.5667 13.3623 10.4754 17.4376 9.96909 12.2396C10.5194 -6.09906 25.9728 8.53856 18.9726 20.5148C18.3122 21.9702 18.2021 23.093 18.8625 24.4237C22.2526 30.4118 20.5575 44.8831 15.3844 44.7168H14.9882L14.9661 44.7999Z" fill="#369331"/>
-                    </g>
-                    </g>
-                    <defs>
-                    <filter id="filter0_g_592_272" x="-0.000195265" y="4.88758e-05" width="23.6" height="47.6" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                    <feTurbulence type="fractalNoise" baseFrequency="1.6666666269302368 1.6666666269302368" numOctaves="3" seed="1782" />
-                    <feDisplacementMap in="shape" scale="5.5999999046325684" xChannelSelector="R" yChannelSelector="G" result="displacedImage" width="100%" height="100%" />
-                    <feMerge result="effect1_texture_592_272">
-                    <feMergeNode in="displacedImage"/>
-                    </feMerge>
-                    </filter>
-                    <filter id="filter1_g_592_272" x="-0.000195265" y="4.88758e-05" width="23.6" height="47.6" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-                    <feTurbulence type="fractalNoise" baseFrequency="1.6666666269302368 1.6666666269302368" numOctaves="3" seed="4478" />
-                    <feDisplacementMap in="shape" scale="5.5999999046325684" xChannelSelector="R" yChannelSelector="G" result="displacedImage" width="100%" height="100%" />
-                    <feMerge result="effect1_texture_592_272">
-                    <feMergeNode in="displacedImage"/>
-                    </feMerge>
-                    </filter>
-                    </defs>
-                    </svg></div>
-                    <div><p>Når du har optjent nok point, kan du vælge mellem en række bæredygtige belønninger. Her finder du fordele der tilbydes i samarbejde med vores partnere.</p></div>
-            </div>
-        </section>
+      <h1>Hvad gør vores samarbejdspartnere grønne?</h1>
+      <hr />
+      <section class="partners"></section>
+      <div class="btn_wrapper">
+        <a href="logind.html"><button class="red_btn">LOG IND OG SE DINE GRØNNE POINT</button></a>
+      </div>
+      <section>
+        <h2>Tre trin til bæredygtige belønninger</h2>
+        <h3>Sammen kan vi gøre mere</h3>
+        <div class="trin">
+          <div class="icon">
+            <svg width="22" height="46" viewBox="0 0 22 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g filter="url(#filter0_g_592_270)">
+                <path
+                  d="M16.7227 42.3251C16.586 42.4122 15.8299 42.6118 15.5566 42.6844C14.0656 43.0763 11.357 42.4957 10.8351 40.5795C10.1642 38.0826 11.0588 32.0873 11.1457 29.3001C11.2824 24.9887 11.2327 20.6627 11.5309 16.3658C10.7854 16.7578 8.99159 18.4769 8.097 19.1156C5.18958 21.206 1.82254 19.1427 3.06502 15.5861C3.18927 15.2232 5.93973 11.3866 6.27521 10.9076C7.2195 9.55752 10.9097 4.75254 11.9161 3.86703C14.9602 1.2105 18.1534 3.86702 18.551 7.96069C19.3089 15.8722 18.1285 25.7871 17.7558 33.8293C17.6812 35.4842 18.1409 40.2166 17.4203 41.1602C17.1345 41.5376 17.4607 41.805 17.0009 42.0953L16.7227 42.3251Z"
+                  fill="#369331"
+                />
+              </g>
+              <defs>
+                <filter id="filter0_g_592_270" x="-0.000195265" y="4.88758e-05" width="21.6" height="45.6" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                  <feTurbulence type="fractalNoise" baseFrequency="1.6666666269302368 1.6666666269302368" numOctaves="3" seed="4478" />
+                  <feDisplacementMap in="shape" scale="5.5999999046325684" xChannelSelector="R" yChannelSelector="G" result="displacedImage" width="100%" height="100%" />
+                  <feMerge result="effect1_texture_592_270">
+                    <feMergeNode in="displacedImage" />
+                  </feMerge>
+                </filter>
+              </defs>
+            </svg>
+          </div>
+          <div><p>Når du betaler med Dankort hos vores samarbejdspartnere, optjener du automatisk grønne point.</p></div>
+          <div class="icon">
+            <svg width="22" height="46" viewBox="0 0 22 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g filter="url(#filter0_g_592_271)">
+                <path
+                  d="M2.83399 42.174C2.93656 32.6895 22.6642 11.5196 12.0995 8.95835C10.8686 8.83829 9.50104 9.15844 8.71467 10.399C7.31288 12.4 7.89411 15.4014 5.535 15.9216C4.1674 16.3218 3.24427 14.2008 3.79131 12.3199C7.62059 -5.32839 24.1343 3.47576 17.057 23.085C15.2791 29.0078 11.655 32.6095 9.09076 37.7719C9.91132 39.0926 13.3303 37.972 14.8005 38.2522C16.6809 38.1721 19.211 39.3327 18.493 41.7738C16.7493 43.6547 13.7748 42.2941 10.1848 42.6943C6.73165 42.5342 4.44092 43.0544 2.93656 42.3741L2.7998 42.134L2.83399 42.174Z"
+                  fill="#369331"
+                />
+              </g>
+              <defs>
+                <filter id="filter0_g_592_271" x="-0.000195265" y="4.88758e-05" width="21.6" height="45.6" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                  <feTurbulence type="fractalNoise" baseFrequency="1.6666666269302368 1.6666666269302368" numOctaves="3" seed="935" />
+                  <feDisplacementMap in="shape" scale="5.5999999046325684" xChannelSelector="R" yChannelSelector="G" result="displacedImage" width="100%" height="100%" />
+                  <feMerge result="effect1_texture_592_271">
+                    <feMergeNode in="displacedImage" />
+                  </feMerge>
+                </filter>
+              </defs>
+            </svg>
+          </div>
+          <div><p>Log ind og se din aktuelle pointsaldo og følge, hvor mange point du har samlet.</p></div>
+          <div class="icon">
+            <svg width="24" height="48" viewBox="0 0 24 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g filter="url(#filter0_g_592_272)">
+                <g filter="url(#filter1_g_592_272)">
+                  <path
+                    d="M14.9661 44.7999C13.6453 44.7999 12.0824 43.5524 11.0698 41.2237C9.50681 38.2296 9.37473 32.4079 11.8182 33.5722C12.9849 34.7366 13.029 38.8118 14.3718 39.6019C17.1895 41.598 18.5323 32.7821 17.2335 29.497C16.5071 26.9603 14.79 25.1306 14.6359 22.1782C14.746 19.3504 16.9914 19.2257 17.3436 16.3564C17.938 13.5702 17.5197 9.41183 15.9788 8.28906C14.8341 7.33262 13.8875 8.53856 13.2711 10.6178C12.5667 13.3623 10.4754 17.4376 9.96909 12.2396C10.5194 -6.09906 25.9728 8.53856 18.9726 20.5148C18.3122 21.9702 18.2021 23.093 18.8625 24.4237C22.2526 30.4118 20.5575 44.8831 15.3844 44.7168H14.9882L14.9661 44.7999Z"
+                    fill="#369331"
+                  />
+                </g>
+              </g>
+              <defs>
+                <filter id="filter0_g_592_272" x="-0.000195265" y="4.88758e-05" width="23.6" height="47.6" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                  <feTurbulence type="fractalNoise" baseFrequency="1.6666666269302368 1.6666666269302368" numOctaves="3" seed="1782" />
+                  <feDisplacementMap in="shape" scale="5.5999999046325684" xChannelSelector="R" yChannelSelector="G" result="displacedImage" width="100%" height="100%" />
+                  <feMerge result="effect1_texture_592_272">
+                    <feMergeNode in="displacedImage" />
+                  </feMerge>
+                </filter>
+                <filter id="filter1_g_592_272" x="-0.000195265" y="4.88758e-05" width="23.6" height="47.6" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                  <feTurbulence type="fractalNoise" baseFrequency="1.6666666269302368 1.6666666269302368" numOctaves="3" seed="4478" />
+                  <feDisplacementMap in="shape" scale="5.5999999046325684" xChannelSelector="R" yChannelSelector="G" result="displacedImage" width="100%" height="100%" />
+                  <feMerge result="effect1_texture_592_272">
+                    <feMergeNode in="displacedImage" />
+                  </feMerge>
+                </filter>
+              </defs>
+            </svg>
+          </div>
+          <div><p>Når du har optjent nok point, kan du vælge mellem en række bæredygtige belønninger. Her finder du fordele der tilbydes i samarbejde med vores partnere.</p></div>
+        </div>
+      </section>
     </main>
-    <script src="listview.js" type="module"></script>
+
     <footer class="footer">
-        <div class="footer-left">
-          <div class="footer-link">
-            <a href="#" class="hover-line">Dankort.dk</a>
-          </div>
-  
-          <div class="footer-social">
-            <div class="social-icons">
-              <img src="assets/instagram.svg" alt="instagram" />
-              <img src="assets/tiktok.svg" alt="tiktok" />
-            </div>
+      <div class="footer-left">
+        <div class="footer-link">
+          <p>
+            <span class="footer-p1">Har du brug for hjælp?</span>
+            Kontakt os <br />
+            <a href="mailto:dankort-point@gmail.dk">dankort-point@gmail.dk</a><br />
+            <a href="tel:+4566778899">+45 66778899</a>
+          </p>
+
+          <p>
+            <span class="footer-p1">Har du ikke et Dankort?</span><br />
+            Kontakt din bank
+          </p>
+
+          <p><a href="#">Dankort.dk</a></p>
+        </div>
+
+        <div class="footer-social">
+          <div class="social-icons">
+            <img src="assets/instagram.svg" alt="Instagram" loading="lazy" />
+            <img src="assets/tiktok.svg" alt="TikTok" loading="lazy" />
+            <img src="assets/facebook.svg" alt="Facebook" loading="lazy" />
           </div>
         </div>
-  
-        <div class="footer-right">
-          <p>Dankort-groen@gmail.com</p>
-          <p>+45 66778899</p>
-          <img src="assets/Dk-logo.svg" alt="DK-logo" class="dk-footer-logo" />
-        </div>
+      </div>
+
+      <div class="footer-right">
+        <p class="footer-slogan">Forbrug med omtanke</p>
+
+        <img src="assets/Dk-logo.svg" alt="Dankort logo" class="dk-footer-logo" />
+      </div>
     </footer>
-</body>
+  </body>
 </html>
