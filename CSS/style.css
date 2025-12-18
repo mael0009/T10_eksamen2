@@ -342,7 +342,7 @@ footer a:hover {
 .galleri-mobil {
   width: 100%;
   height: 100%;
-  border-radius: 10px;
+  border-radius: 25px;
   object-fit: cover;
 }
 
@@ -458,7 +458,7 @@ footer a:hover {
 /****** DESKTOP ******/
 @media (min-width: 768px) {
   main {
-    padding: 6rem;
+    margin: 6rem;
   }
 
   hr {
